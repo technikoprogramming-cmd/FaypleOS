@@ -1,0 +1,280 @@
+Do you have an (apple) iPad that maybe not being used or you have js got your self a diffrent tablet like newer iPad or samsung tablet or xiaomi and you dont know what to do with it, turn in into a nas server with Nikodem's FaypleOS 
+Imainge a trully privete data cloud no-tracking. Easy setup no more subscription max security cause to get into your server
+
+People will need
+
+To be on the same wifi network
+NFOSS app or local hosted website .html
+Or windows app 
+Or linux app
+Or MacOS app
+Or iOS 1conf1g profile app
+
+What ever it is 
+They will need your username 
+They will need app password
+They will need server password 
+
+And if you susspect someone on the server (your own cloud) you can js click stop server on your device of choice to be a server and then change password en username but have to update .html aswell then its easy and simple 
+
+Another security that i offer is raner
+So when you have phtotos 
+You gonna put your photos, videos in a folder zip it password it. Then upload it 
+Then you gonna do the same thing to documents .zip but every file diffrent password if you have music same thing apks same thing .zip password diffrent
+So when someone dose bypass the whole thing they will have to decrypt all the folders like
+Photos-3.zip
+Mydata.zip
+
+Etc
+
+And when you wanna add a new photos documents all you do is make a new zip password it
+
+For example
+Photos-2.zip
+Photos-1.zip
+And either have same passwords for same file typs of difdrent to make hackers life harder
+
+So photos from 2020
+Coule have password like
+Photos-2020.zip example1
+And photos-2026 you uploaded could have password like
+Edamdjfj19
+
+For max security
+
+They will need to have the iP
+And last port
+
+So 8-securitys to byppas
+Called NikoThing
+
+lets get started number 1 
+
+iPad flash "reset your iPad" sing into an apple iD
+then delete every app you can
+then download "owelFiles"  
+then go to setings acessibility the enable assistive aceess
+then set a password for your decice then
+log out of your apple iD
+then plug your iPad in to the charger
+then open owelfiles and turn on assistive acess now you are done
+go to more and build in server then start give it a password
+and a username
+then remember the iP and username causw you will need it for
+ncs frontend setup
+
+
+
+## 🛠 Setup Guide: Nikodem's OS Frontend
+
+This is a **Frontend Template**. It provides the glassmorphism UI, terminal, and dashboard, but you must "plug in" your own server details in the code to make the buttons and stats work.
+
+### 1. Identify the OS Name
+
+If you are sharing this, ensure people know it is the **Nikodem's OS Frontend**.
+
+* **In the Code:** * Look for `<title>FaypleOS | Server Template</title>`
+* You can change this to `<title>Nikodem's OS Frontend</title>`
+
+
+
+### 2. Setting the Connection (IP & Port)
+
+To see your server address on the dashboard and in the system info:
+
+* **Dashboard Stats:** Find the line `<div class="stat-val">IP: HERE GOSE IP:PORT</div>`. Replace `HERE GOSE IP:PORT` with your actual address (e.g., `192.168.1.50:8080`).
+* **The "Link" Button:** Find the button that opens the file manager:
+* `onclick="window.open('HERE PUT http ip with port...')"`
+* **Change to:** `onclick="window.open('http://your-server-ip:port')"`
+
+
+
+### 3. User & Hardware Identity
+
+The frontend needs to know who is "logged in" for the display:
+
+* **Username:** Find `HERE PUT YOUR USERNAME`. Change it to your server's root or admin name. This makes the terminal look like a real Debian session.
+* **Host Name:** Find `HERE PUT SERVER NAME`. Change it to the name of your physical machine (e.g., "Nikodem-Main-Server").
+
+### 4. How to Edit the Code
+
+1. **Right-click** your `.html` file and select **"Open with..."** and choose **Notepad** or **VS Code**.
+2. Use **Ctrl+F** (Find) to search for the keywords: `HERE PUT`, `IP:PORT`, or `USERNAME`.
+3. Replace the text inside the quotes or tags with your data.
+4. **Save** and refresh your browser.
+
+
+
+
+then ond## 🛠 Setup Guide: Nikodem's OS Frontend
+
+This is a **Frontend Template**. It provides the glassmorphism UI, terminal, and dashboard, but you must "plug in" your own server details in the code to make the buttons and stats work.
+
+### 1. Identify the OS Name
+
+If you are sharing this, ensure people know it is the **Nikodem's OS Frontend**.
+
+* **In the Code:** * Look for `<title>FaypleOS | Server Template</title>`
+* You can change this to `<title>Nikodem's OS Frontend</title>`
+
+
+
+### 2. Setting the Connection (IP & Port)
+
+To see your server address on the dashboard and in the system info:
+
+* **Dashboard Stats:** Find the line `<div class="stat-val">IP: HERE GOSE IP:PORT</div>`. Replace `HERE GOSE IP:PORT` with your actual address (e.g., `192.168.1.50:8080`).
+* **The "Link" Button:** Find the button that opens the file manager:
+* `onclick="window.open('HERE PUT http ip with port...')"`
+* **Change to:** `onclick="window.open('http://your-server-ip:port')"`
+
+
+
+### 3. User & Hardware Identity
+
+The frontend needs to know who is "logged in" for the display:
+
+* **Username:** Find `HERE PUT YOUR USERNAME`. Change it to your server's root or admin name. This makes the terminal look like a real Debian session.
+* **Host Name:** Find `HERE PUT SERVER NAME`. Change it to the name of your physical machine (e.g., "Nikodem-Main-Server").
+
+### 4. How to Edit the Code
+
+1. **Right-click** your `.html` file and select **"Open with..."** and choose **Notepad** or **VS Code**.
+2. Use **Ctrl+F** (Find) to search for the keywords: `HERE PUT`, `IP:PORT`, or `USERNAME`.
+3. Replace the text inside the quotes or tags with your data.
+4. **Save** and refresh your browser.
+
+
+
+
+
+
+
+
+## 🛠 Setup Guide: Nikodem's OS Frontend
+
+This is a **Frontend Template**. It provides the glassmorphism UI, terminal, and dashboard, but you must "plug in" your own server details in the code to make the buttons and stats work.
+
+### 1. Identify the OS Name
+
+If you are sharing this, ensure people know it is the **Nikodem's OS Frontend**.
+
+* **In the Code:** * Look for `<title>FaypleOS | Server Template</title>`
+* You can change this to `<title>Nikodem's OS Frontend</title>`
+
+
+
+### 2. Setting the Connection (IP & Port)
+
+To see your server address on the dashboard and in the system info:
+
+* **Dashboard Stats:** Find the line `<div class="stat-val">IP: HERE GOSE IP:PORT</div>`. Replace `HERE GOSE IP:PORT` with your actual address (e.g., `192.168.1.50:8080`).
+* **The "Link" Button:** Find the button that opens the file manager:
+* `onclick="window.open('HERE PUT http ip with port...')"`
+* **Change to:** `onclick="window.open('http://your-server-ip:port')"`
+
+
+
+### 3. User & Hardware Identity
+
+The frontend needs to know who is "logged in" for the display:
+
+* **Username:** Find `HERE PUT YOUR USERNAME`. Change it to your server's root or admin name. This makes the terminal look like a real Debian session.
+* **Host Name:** Find `HERE PUT SERVER NAME`. Change it to the name of your physical machine (e.g., "Nikodem-Main-Server").
+
+### 4. How to Edit the Code
+
+1. **Right-click** your `.html` file and select **"Open with..."** and choose **Notepad** or **VS Code**.
+2. Use **Ctrl+F** (Find) to search for the keywords: `HERE PUT`, `IP:PORT`, or `USERNAME`.
+3. Replace the text inside the quotes or tags with your data.
+4. **Save** and refresh your browser.
+
+
+
+
+
+## 🛠 Setup  Nikodem's OS Frontend
+
+This is a **Frontend Template**. It provides the glassmorphism UI, terminal, and dashboard, but you must "plug in" your own server details in the code to make the buttons and stats work.
+
+### 1. Identify the OS Name
+
+If you are sharing this, ensure people know it is the **Nikodem's OS Frontend**.
+
+* **In the Code:** * Look for `<title>FaypleOS | Server Template</title>`
+* You can change this to `<title>Nikodem's OS Frontend</title>`
+
+
+
+### 2. Setting the Connection (IP & Port)
+
+To see your server address on the dashboard and in the system info:
+
+* **Dashboard Stats:** Find the line `<div class="stat-val">IP: HERE GOSE IP:PORT</div>`. Replace `HERE GOSE IP:PORT` with your actual address (e.g., `192.168.1.50:8080`).
+* **The "Link" Button:** Find the button that opens the file manager:
+* `onclick="window.open('HERE PUT http ip with port...')"`
+* **Change to:** `onclick="window.open('http://your-server-ip:port')"`
+
+
+
+### 3. User & Hardware Identity
+
+The frontend needs to know who is "logged in" for the display:
+
+* **Username:** Find `HERE PUT YOUR USERNAME`. Change it to your server's root or admin name. This makes the terminal look like a real Debian session.
+* **Host Name:** Find `HERE PUT SERVER NAME`. Change it to the name of your physical machine (e.g., "Nikodem-Main-Server").
+
+### 4. How to Edit the Code
+
+1. **Right-click** your `.html` file and select **"Open with..."** and choose **Notepad** or **VS Code**.
+2. Use **Ctrl+F** (Find) to search for the keywords: `HERE PUT`, `IP:PORT`, or `USERNAME`.
+3. Replace the text inside the quotes or tags with your data.
+4. **Save** and refresh your browser.
+
+then you can either use webintoapp to compile for android 
+or use a windows batch plus chrome plus installnforge setupnmake plus bat to exe to get this into an exe 
+templetes will be provided to you
+now we need to "Flash" iPad or a standard android tablet
+on iPad download owel fil## 🛠 Setup Guide: Nikodem's OS Frontend
+
+This is a **Frontend Template**. It provides the glassmorphism UI, terminal, and dashboard, but you must "plug in" your own server details in the code to make the buttons and stats work.
+
+### 1. Identify the OS Name
+
+If you are sharing this, ensure people know it is the **Nikodem's OS Frontend**.
+
+* **In the Code:** * Look for `<title>FaypleOS | Server Template</title>`
+* You can change this to `<title>Nikodem's OS Frontend</title>`
+
+
+
+### 2. Setting the Connection (IP & Port)
+
+To see your server address on the dashboard and in the system info:
+
+* **Dashboard Stats:** Find the line `<div class="stat-val">IP: HERE GOSE IP:PORT</div>`. Replace `HERE GOSE IP:PORT` with your actual address (e.g., `192.168.1.50:8080`).
+* **The "Link" Button:** Find the button that opens the file manager:
+* `onclick="window.open('HERE PUT http ip with port...')"`
+* **Change to:** `onclick="window.open('http://your-server-ip:port')"`
+
+
+
+### 3. User & Hardware Identity
+
+The frontend needs to know who is "logged in" for the display:
+
+* **Username:** Find `HERE PUT YOUR USERNAME`. Change it to your server's root or admin name. This makes the terminal look like a real Debian session.
+* **Host Name:** Find `HERE PUT SERVER NAME`. Change it to the name of your physical machine (e.g., "Nikodem-Main-Server").
+
+### 4. How to Edit the Code
+
+1. **Right-click** your `.html` file and select **"Open with..."** and choose **Notepad** or **VS Code**.
+2. Use **Ctrl+F** (Find) to search for the keywords: `HERE PUT`, `IP:PORT`, or `USERNAME`.
+3. Replace the text inside the quotes or tags with your data.
+4. **Save** and refresh your browser.
+
+
+aditional tip if your iPad gets shutdown 
+just login with your admin password open owelfile and turn on awel mode 
+then start server (build-in)
+

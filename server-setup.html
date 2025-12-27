@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>FaypleOS | Server Template</title>
+    <style>
+        :root {
+            --accent: #00d2ff;
+            --accent-glow: rgba(0, 210, 255, 0.4);
+            --bg-gradient: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --text: #e0e0e0;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        body, html { 
+            margin: 0; padding: 0; height: 100%; width: 100%;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg-gradient); color: var(--text);
+            overflow: hidden; 
+        }
+
+        .screen { 
+            display: none; height: 100vh; width: 100vw; 
+            padding: 20px; padding-bottom: 80px;
+            flex-direction: column; align-items: center; 
+            justify-content: center; position: absolute; top: 0; left: 0;
+            backdrop-filter: blur(10px); transition: all 0.5s ease;
+            overflow-y: auto;
+        }
+        .active { display: flex; animation: fadeIn 0.4s ease-out; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 25px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        }
+
+        .brand-text {
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin: 0;
+        }
+
+        button {
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 16px;
+            border-radius: 14px;
+            font-weight: 700;
+            width: 100%;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+        button:active { transform: scale(0.96); opacity: 0.9; }
+
+        input, select {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+            background: rgba(0,0,0,0.3);
+            color: white;
+            font-size: 16px;
+        }
+
+        .navbar {
+            position: fixed; bottom: 0; left: 0; width: 100%; height: 60px;
+            background: rgba(0,0,0,0.8); display: none; justify-content: space-around;
+            align-items: center; border-top: 1px solid var(--glass-border); z-index: 1000;
+        }
+        .nav-btn { font-size: 24px; cursor: pointer; opacity: 0.5; color: white; padding: 10px; }
+        .nav-btn:active { opacity: 1; color: var(--accent); }
+
+        .dash-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            width: 100%;
+            max-width: 450px;
+        }
+        .stat-box {
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 18px;
+            border: 1px solid var(--glass-border);
+            text-align: left;
+        }
+        .stat-label { font-size: 10px; text-transform: uppercase; color: var(--accent); font-weight: bold; }
+        .stat-val { font-size: 14px; font-weight: 600; margin-top: 4px; }
+
+        .term-box {
+            background: #000; color: #00ff00; font-family: monospace; padding: 15px;
+            border-radius: 15px; width: 100%; height: 200px; overflow-y: auto; text-align: left; font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="boot" class="screen active" style="background: #000;">
+        <h1 class="brand-text" style="font-size: 2.5rem;">FaypleOS</h1>
+        <p style="letter-spacing: 3px; font-size: 10px; opacity: 0.6;">SERVER BUILDER EDITION</p>
+        <div class="loader-bg" style="width: 150px; height: 6px; background: rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; margin-top: 20px;">
+            <div id="boot-bar" style="height: 100%; width: 0%; background: var(--accent); transition: width 0.3s;"></div>
+        </div>
+    </div>
+
+    <div id="dashboard" class="screen" style="justify-content: flex-start; padding-top: 60px;">
+        <div style="width: 100%; max-width: 450px; margin-bottom: 20px; text-align: left;">
+            <h1 class="brand-text" style="font-size: 1.8rem;">Custom Dashboard</h1>
+            <p style="font-size: 12px; opacity: 0.6; margin-top: -10px;">FaypleOS Server Template</p>
+        </div>
+
+        <div class="dash-grid">
+            <div class="stat-box"><div class="stat-label">OS</div><div class="stat-val">FaypleOS</div></div>
+            <div class="stat-box"><div class="stat-label">Username</div><div class="stat-val">HERE PUT YOUR USERNAME</div></div>
+            <div class="stat-box" style="grid-column: span 2;"><div class="stat-label">Host Server</div><div class="stat-val">HERE PUT SERVER NAME</div></div>
+            <div class="stat-box" style="grid-column: span 2;"><div class="stat-label">Network Interface</div><div class="stat-val">IP: HERE GOSE IP:PORT</div></div>
+        </div>
+
+        <div style="width: 100%; max-width: 450px; margin-top: 20px;">
+            <button onclick="window.open('HERE PUT http ip with port example http://1.021.2.128.1029:1234')" style="background: #fff; color: #000;">Open File Manager</button>
+            <button onclick="showScreen('about')">View System Info</button>
+            <button onclick="showScreen('terminal')">Open Terminal</button>
+        </div>
+    </div>
+
+    <div id="terminal" class="screen" style="justify-content: flex-start; padding-top: 60px;">
+        <h2 class="brand-text">Remote Terminal</h2>
+        <div class="term-box" id="term-out">
+            Connected to FaypleOS Kernel...<br>
+            USER: HERE PUT YOUR USERNAME (MUST MATCH HOST SERVER)<br>
+            root@remote:~$ 
+        </div>
+        <input type="text" id="term-in" placeholder="Enter remote command..." style="margin-top:15px; border-color: #00ff00;">
+        <button onclick="runCommand()" style="background:#00ff00; color:#000;">Run Command</button>
+    </div>
+
+    <div id="about" class="screen">
+        <div class="glass-card">
+            <h2 class="brand-text">Configuration</h2>
+            <div style="text-align: left; font-size: 14px; margin: 20px 0; line-height: 1.8;">
+                <b>System:</b> FaypleOS Template<br>
+                <b>IP Address:</b> HERE GOSE IP:PORT<br>
+                <b>User Identity:</b> HERE PUT YOUR USERNAME<br>
+                <b>Status:</b> Ready for Setup
+            </div>
+            <button onclick="showScreen('dashboard')">Back to Dashboard</button>
+        </div>
+    </div>
+
+    <div class="navbar" id="nav">
+        <div class="nav-btn" onclick="goBack()">◁</div>
+        <div class="nav-btn" onclick="showScreen('dashboard')">⌂</div>
+        <div class="nav-btn" onclick="showScreen('terminal')">⌨</div>
+        <div class="nav-btn" onclick="showScreen('about')">ⓘ</div>
+    </div>
+
+    <script>
+        let screenHistory = [];
+
+        function showScreen(id, saveToHistory = true) {
+            const currentActive = document.querySelector('.screen.active');
+            if (currentActive && saveToHistory) {
+                if (screenHistory[screenHistory.length - 1] !== currentActive.id) {
+                    screenHistory.push(currentActive.id);
+                }
+            }
+            document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            document.getElementById('nav').style.display = ['dashboard', 'terminal', 'about'].includes(id) ? 'flex' : 'none';
+        }
+
+        function goBack() {
+            if (screenHistory.length > 0) showScreen(screenHistory.pop(), false);
+        }
+
+        window.onload = () => {
+            let p = 0;
+            let int = setInterval(() => {
+                p += 10;
+                document.getElementById('boot-bar').style.width = p + "%";
+                if(p >= 100) { clearInterval(int); showScreen('dashboard', false); }
+            }, 50);
+        };
+
+        function runCommand() {
+            let cmd = document.getElementById('term-in').value;
+            let out = document.getElementById('term-out');
+            out.innerHTML += `<br>root@remote:~$ ${cmd}<br>[REMOTE] Sending to server...`;
+            document.getElementById('term-in').value = "";
+            out.scrollTop = out.scrollHeight;
+        }
+    </script>
+</body>
+</html>
